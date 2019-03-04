@@ -18,8 +18,6 @@ class Location(models.Model):
 class Category(models.Model):
    name = models.CharField(max_length =60)
 
-   class Meta:
-    unique = ('name')
 
    def __str__(self):
        return self.name
@@ -37,7 +35,7 @@ class Image(models.Model):
    name = models.CharField(max_length =60)
    description = models.TextField()
    location = models.ForeignKey(Location)
-   category = models.ForeignKey(Category,db_column='name')
+   category = models.ForeignKey(Category)
    pub_date = models.DateTimeField(auto_now_add=True)
    article_image = models.ImageField(upload_to = 'articles/')
 
