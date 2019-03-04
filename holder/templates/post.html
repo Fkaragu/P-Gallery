@@ -5,26 +5,24 @@
 
 <div class="container">
 
-  <!-- Looping through news   -->
+  <!-- Looping through db images an info -->
   {% for img_item in img %}
 
   <div class="row">
-    <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-6">
-      <h2 class="text-center"> {{ img_item.name }} </h2>
-    </div>
+  <div class ="col-md-4">
     <div>
-      <img src="{{img_item.article_image.url}}" class="img-responsive" alt="Image">
+      <img src="{{img_item.article_image.url}}" class="img-responsive" alt="Image" width ="300" height ="300">
+      <p><center>{{ img_item.name }}</center></p>
     </div>
-
+    <hr>
   </div>
 
-  {% empty %}
-  <div class="row">
-    <h2 class="text-center">There No Image Items</h2>
+  <div class ="col-md-8">
+  <p><center>{{ img_item.description }}</center></p>
   </div>
+  </div>
+
   {% endfor %}
 
 </div>
-
 {% endblock %}
