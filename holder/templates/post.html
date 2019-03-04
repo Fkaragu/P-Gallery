@@ -39,11 +39,18 @@
         <br>
         <p class="modal-title fnt">{{ img_item.description }}</p>
         <br>
-        <center><p class="modal-title fnt">{{ img_item.pub_date }}</p></center>
-        <button type="button" value="https://thashpg.herokuapp.com/{{post.image.url}}" onclick="copyLink()"
-        class="btn btn-outline-secondary my-2 my-sm-0 link-btn" id ="myInput">Copy Photo Link</button>
+        <center>
+          <p class="modal-title fnt">{{ img_item.pub_date }}</p>
+        </center>
+      </div>
+
+      <div class="modal-footer">
+        <input class="form-control" type="text" value="https://thashpg.herokuapp.com{{img_item.article_image.url}}" id="{{img_item.id}}-url">
+        <button type="button" value="https://thashpg.herokuapp.com/{{img_item.article_image.url}}" onclick="copyLink()" class="btn btn-outline-secondary my-2 my-sm-0 link-btn">Copy Photo Link</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
+
   </div>
 </div>
 {% endfor %}
