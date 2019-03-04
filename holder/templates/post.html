@@ -26,8 +26,21 @@
       <p class="fnt">{{ img_item.description }}</p>
     </div>
   </div>
-
   {% endfor %}
-
 </div>
+{% for img_item in img %}
+<div class="modal" id="myModal{{img_item.id}}" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <center><img src="{{img_item.article_image.url }}" alt="" width="400" height="400"></center>
+        <br>
+        <p class="modal-title">{{ img_item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
 {% endblock %}
