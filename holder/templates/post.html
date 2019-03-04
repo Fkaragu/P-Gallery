@@ -40,6 +40,8 @@
         <p class="modal-title fnt">{{ img_item.description }}</p>
         <br>
         <center><p class="modal-title fnt">{{ img_item.pub_date }}</p></center>
+        <button type="button" value="https://thashpg.herokuapp.com/{{post.image.url}}" onclick="copyLink()"
+        class="btn btn-outline-secondary my-2 my-sm-0 link-btn" id ="myInput">Copy Photo Link</button>
       </div>
     </div>
   </div>
