@@ -33,7 +33,7 @@ Personal Gallery is a web application that allows users to view, post and manage
     - POSTGRES
 
 ## Application link
-Here is a live working link https://thashblog.herokuapp.com
+Here is a live working link https://thashpg.herokuapp.com/
 
 ## Set-up and Installation
     - Install python 3.6
