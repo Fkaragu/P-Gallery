@@ -9,17 +9,22 @@
   {% for img_item in img %}
 
   <div class="row">
-  <div class ="col-md-4">
-    <div>
-      <img src="{{img_item.article_image.url}}" class="img-responsive" alt="Image" width ="300" height ="300">
-      <p><center>{{ img_item.name }}</center></p>
+    <div class="col-md-4">
+      <div>
+        <!-- modal button -->
+        <button type="button" class="btn" data-toggle="modal" data-target="#myModal{{img_item.id}}">
+          <img src="{{img_item.article_image.url}}" class="img-responsive" alt="Image" width="300" height="300">
+          <p>
+            <center>{{ img_item.name }}</center>
+          </p>
+        </button>
+        <hr>
+      </div>
     </div>
-    <hr>
-  </div>
 
-  <div class ="col-md-8">
-  <p><center>{{ img_item.description }}</center></p>
-  </div>
+    <div class="col-md-8">
+      <p>{{ img_item.description }}</p>
+    </div>
   </div>
 
   {% endfor %}
